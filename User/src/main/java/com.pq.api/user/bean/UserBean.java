@@ -1,9 +1,6 @@
 package com.pq.api.user.bean;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * <pre>
@@ -20,8 +17,11 @@ public class UserBean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "pw")
     private String password;
+    @Column(name = "email")
     private String email;
 
     public Integer getId() {
